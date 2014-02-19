@@ -12,10 +12,10 @@
         <script type="text/javascript" src="js/func.js"></script>
         <script src="js/jquery_chained.js"></script>
         <script type='text/javascript'>
-        function showMe(str)
+       /* function showMe(str)
         {
         document.getElementById('myDiv').innerHTML =+str;
-        }      
+        }   */   
             </script>
         
     </head>
@@ -23,47 +23,92 @@
         <div class="shell">
             <div class="border">
                 <div id="header">
-                    <h3 id="logo"><a href="WHO Resolutions" class="notext">WHO Resolutions</a></h3>
+                    <h3 id="logo"><a href="#" class="notext">WHO High Level Meeting Resolutions (2009-2013)</a></h3>
+                    <h5 id="logo2"><a href="#"></a></h5>
                     
                     <div class="cl">&nbsp;</div>
                 </div>
                 <div id="navigation">
                     <form method="post" action="find_file.php" name="form1" >
                     <ul>
-                        <li style="width: 80px"><a href="#" class="active">Home</a></li>
+                        <!--<li style="width: 80px"><a href="#" class="active">Home</a></li>-->
                         <li>
                             <select id="mark" name="mark" class="top-menu">
                                 <option value="">Types of Meeting</option>
                                 <option value="WHA">WHA</option>
+								<option value="EB">WHO EB</option>
+								<option value="RC">WHO SEA RC</option>
+								<option value="Declarations and Others">Declarations/Others</option>
                             </select>                       
                         </li>
-                        <li style="width: 130px;">
+						<!--
+						<li style="width: 130px;">
                             <select id="series" name="series" class="top-menu" style="width: 125px;">
+                                <option value="">Resolution No.</option>
+								<option value="2009" class="WHA">62</option>
+								<option value="2010" class="WHA">63</option>
+								<option value="2011" class="WHA">2011</option>
+                                <option value="2012" class="WHA">2012</option>
+                                <option value="2013" class="WHA">2013</option>
+
+                            </select>
+                        </li>-->
+						
+						 <li>
+                             <select id="engine" name="engine" class="top-menu" onchange="showMe(this.value);" >
+                                <option value="">Resolution No.</option>
+                                <option value="Technical" class="2013 a3 a5">62</option>
+                                <option value="WHO Policy Program" class="2013 a3 a5">63</option>
+								 <option value="WHO Administration" class="2013 a3 a5">64</option>
+								 <option value="Others" class="2013 a3 a6">65</option>
+								  <option value="Others" class="2013 a3 a6">66</option>
+                            </select>
+                        </li>
+						    <li>
+                             <select id="engine" name="engine" class="top-menu" onchange="showMe(this.value);" >
+                                <option value="">No.</option>
+                                <option value="Technical" class="2013 a3 a5">1</option>
+                                <option value="WHO Policy Program" class="2013 a3 a5">2</option>
+								 <option value="WHO Administration" class="2013 a3 a5">3</option>
+								 <option value="Others" class="2013 a3 a6">4</option>
+								  <option value="Others" class="2013 a3 a6">5</option>
+                            </select>
+                        </li>
+                        <li style="width: 130px;">
+                            <select id="series" name="series" class="top-menu" style="width: 120px;">
                                 <option value="">Year</option>
+								<option value="2009" class="WHA">2009</option>
+								<option value="2010" class="WHA">2010</option>
+								<option value="2011" class="WHA">2011</option>
                                 <option value="2012" class="WHA">2012</option>
                                 <option value="2013" class="WHA">2013</option>
 
                             </select>
                         </li>
+					
                         <li>
                              <select id="engine" name="engine" class="top-menu" onchange="showMe(this.value);" >
                                 <option value="">Types of Resolution</option>
-                                <option value="Technical/ CA" class="2013 a3 a5">Technical/ CA</option>
-                                <option value="Administrative/CB" class="2013 a3 a5">Administrative/CB</option>
-                                             
+                                <option value="Technical" class="2013 a3 a5">Technical</option>
+                                <option value="WHO Policy Program" class="2013 a3 a5">WHO Policy Program</option>
+								 <option value="WHO Administration" class="2013 a3 a5">WHO Administration</option>
+								 <option value="Others" class="2013 a3 a6">Others</option>
                             </select>
-                            
                         </li>
                         <li style="width: 165px;">
                             <select id="model" name="model" class="top-menu" style="width: 160px;">
                                 <option value="">Area</option>
                                 <option value="1" class="2013 series-5 series-6 a3 a4 a5">Communicable Disease</option>
                                 <option value="2" class="2013 series-5 series-6 a3 a4 a5">Non-Communicable Disease</option>
-                                <option value="3" class="2013 series-5 series-6 a3 a4 a5">Life-Course Health/ Family and Community Health</option>
+                                <option value="3" class="2013 series-5 series-6 a3 a4 a5">Family Health</option>
                                 <option value="4" class="2013 series-5 series-6 a3 a4 a5">Health And Environment</option>
                                 <option value="5" class="2013 series-5 series-6 a3 a4 a5">Health System</option>
-                                <option value="6" class="2013 series-5 series-6 a3 a4 a5">Resource Mobilization and Partnarship</option>
+                                <option value="6" class="2013 series-5 series-6 a3 a4 a5">Partnarship</option>
                                 <option value="7" class="2013 series-5 series-6 a3 a4 a5">WHO Administration</option>
+								<option value="8" class="2013 series-5 series-6 a3 a4 a6">Determinants of Health</option>
+								<option value="9" class="2013 series-5 series-6 a3 a4 a7">Health in Emergencies</option>
+								<option value="10" class="2013 series-5 series-6 a3 a4 a8">WHO Policy Program</option>
+								<option value="11" class="2013 series-5 series-6 a3 a4 a9">Others</option>
                                 
                                
                             </select>
@@ -73,9 +118,8 @@
                             <select id="model" name="model" class="top-menu" style="width: 130px;">
                                 <option value="">Resolution</option>
                                 <option value="Technical/ CA" class="2013 a3 a5">Full Text</option>
-                                <option value="Administrative/CB" class="2013 a3 a5">Preamble</option>
-                                <option value="Administrative/CB" class="2013 a3 a5">Operative</option> 
-                            </select>				
+                                <option value="Administrative/CB" class="2013 a3 a5">Operative Part</option>
+							</select>				
                         </li>
                         
                        <!-- <li><a href="#">Contact</a></li>-->
@@ -85,7 +129,7 @@
                       
                     </ul>  </form>
                     
-                    <div align="right" style="padding-right:15px"> <a href="all_document.php">See All Type of Resolutions </a>
+                    <div align="right" style="padding-right:15px"> <a href="all_document.php">See All Types Of Resolutions </a>
                           </div> 
                    <div class="cl">&nbsp;</div>
                 </div>
@@ -99,11 +143,12 @@
                     <div id="content w" class="left">
                         <div class="welcome n">
                             <h3>Welcome Note</h3>
-                            
-                            <p>A United Nations General Assembly Resolution is voted on by all member states of the United Nations in the General Assembly.
-
-General Assembly resolutions usually require a simple majority (50 percent of all votes plus one) to pass. However, if the General Assembly determines that the issue is an "important question" by a simple majority vote, then a two-thirds majority is required; "important questions" are those that deal significantly with maintenance of international peace and security, admission of new members to the United Nations, suspension of the rights and privileges of membership, expulsion of members, operation of the trusteeship system, or budgetary questions.</p>
-                             </div>
+                            <p>WHO is a specialized agency of the United Nations (UN), which was established in the year 1946 with the objective of attainment by all peoples of the highest possible level of health. For achieving  the objective, the organization, among others, performs functions like directing and coordinating in international health works, maintaining effective collaboration with UN and its specialized agencies, Government health administration, professional groups and such other organizations, assisting  countries in strengthening health services through appropriate technical assistance and aid upon request of the Governments, and stimulating and advancing work for prevention control and eradication of  epidemic, endemic and other diseases. All members of the United Nations (UN) are regarded as members of the organization. The work of the organization is carried out by its three organs, namely; The World Health Assembly (WHA), The Executive Board and The Secretariat..
+<br/><br/>The WHA is composed of delegates representing Member States. The Assembly meets in regular annual session and in such special session as may be necessary. During sessions, the WHA takes resolutions and decisions for accomplishing its assigned functions. The Executive Board (EB), consisting of 34 Members designated by as many Member States, acts as the executive organ of the WHA. The main function of EB is to give effects to the decisions and policies of the Assembly as well as to submit advice or proposal to the Assembly on its own initiative.
+<br/><br/> The Secretariat of the organization comprises the Director General (DG) and such other technical administrative staff as the organization may require. The DG is appointed by the WHA on the nomination of EB. The DG is the ex officio secretary of the WHA, EB and all other commissions and committees, unless such function is delegated by the DG.
+<br/><br/>For effectively managing the regional matters of the organization, six regional organizations have been established by the WHA to meet special needs of each region. Each regional organization consists of a Regional Committee (RC) and a Regional Office. RC is composed of representatives of the Member States of that region. Bangladesh is placed in the South East Asia Region (SEAR). RC usually meets once in a year. The main assigned function of RC is to formulate policies and actions on health issues of regional character. Head of the Regional office is the Regional Director (RD) appointed by the EB in agreement of the recommendation from RC. Regional Office is the administrative organ of the regional committee and also carries out resolutions and decisions of the WHA and the EB within the region.
+<br/><br/>Resolutions taken in sessions of WHA, EB and RC of WHO are important guiding document for each of the Member State. Bangladesh, being an active member in all sessions of high-level meetings of WHO, recognizes national, regional and international implications of those resolutions, recommendations and decisions for health improvement. Hence, a database with resolutions adopted in high-level meetings of the organization from 2009-2013 has been developed for use by interested persons, institutions and organizations.  
+</div>
                         
                     <div class="cl">&nbsp;</div>
                 </div>
@@ -123,9 +168,9 @@ General Assembly resolutions usually require a simple majority (50 percent of al
        
     </body>
     <script>
-        $("#series").chained("#mark");
-        $("#model").chained("#series");
-        $("#engine").chained("#series, #model");
+       $("#series").chained("#mark");
+       $("#model").chained("#series");
+       $("#engine").chained("#series, #model");
     </script>
 </html>
  

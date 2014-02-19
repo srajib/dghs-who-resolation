@@ -91,11 +91,19 @@ textarea {
 }
 #logo a {
 	background:url(images/logo1.png) no-repeat 0 0;
-	width:980px;
-	height:109px;
+	width:988px;
+	height:90px;
 	position:absolute;
 	top:0;
 	left:0;
+}
+#logo2 a {
+    height: 61px;
+    margin-left: 360px;
+    margin-right: auto;
+    margin-top: 71px;
+    position: absolute;
+    width: 980px;
 }
 .logo b {
 	background:url(images/logo_w.gif) no-repeat 0 0;
